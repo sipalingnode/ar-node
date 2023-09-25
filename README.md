@@ -7,9 +7,14 @@
 
 # TUTORIAL AR.io NODE
 
+## Hal yang di perlukan sebelum garap
+1. Siapkan domain bisa buy disini murah 15K : https://www.hostinger.co.id/
+2. token Arweave $AR buy di Binance atau seller
+3. Wallet $AR : https://chrome.google.com/webstore/detail/arconnect/einnioafmpimabjcddiinlhmijaionap
+
 ## SPEK VPS
 
-|  Komponen |  Persyaratan Minimum |
+|  Komponen |  Minimum |
 | ------------ | ------------ |
 | CPU  | 4CPU cores  |
 | RAM | 4GB RAM |
@@ -20,3 +25,17 @@
 ```
 wget -O ar-node.sh https://raw.githubusercontent.com/sipalingnode/ar-node/main/ar-node.sh; chmod +x ar-node.sh; ./ar-node.sh
 ```
+## Edit File (perhatikan tabel dibawah apa saja yang harus diganti)
+```
+cd ~/ar-io-node
+nano .env
+```
+| GRAPHQL_HOST | arweave.net |
+| ------------ | ------------ |
+| GRAPHQL_PORT | 443 |
+| START_HEIGHT | 1000000 |
+| ARNS_ROOT_HOST | ganti dengan domain lu |
+| ADMIN_API_KEY | password lu bebas |
+| AR_IO_WALLET | address dari AR wallet |
+
+Kalo udah ganti semua lalu `CRL+XY Enter `
