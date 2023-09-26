@@ -39,6 +39,7 @@ ARNS_ROOT_HOST=ganti dengan domain lu
 ADMIN_API_KEY=password lu bebas
 AR_IO_WALLET=address dari AR wallet
 ```
+**Keterangan yang harus diganti cek tabel dibawah**
 | GRAPHQL_HOST | arweave.net |
 | ------------ | ------------ |
 | GRAPHQL_PORT | 443 |
