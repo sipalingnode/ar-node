@@ -57,5 +57,21 @@ Kalo udah ganti semua lalu `CRL+XY Enter `
 4. Tambahkan DNS baru
 5. Settingannya samain aja kek digambar, bedanya cuman di IPVPS
 <p align="center">
-  <img height="300" height="auto" src="https://user-images.githubusercontent.com/109174478/587b575d-8e5a-4817-a3b1-797184aa0618.jpg">
+  <img height="200" height="auto" src="https://user-images.githubusercontent.com/109174478/270795435-587b575d-8e5a-4817-a3b1-797184aa0618.jpg">
 </p>
+
+## Setting SSL
+1. Login ke VPS lagi
+2. Lalu paste code yang dibawah (Perhatikan kodenya ada yang harus kalian ganti dibagian email & domain)
+```
+sudo certbot certonly --manual --preferred-challenges dns --email pakemailu@gmail.com -d domainlu -d '*.domainlu'
+```
+3. Cek gambar yang di garis bawah, kalian harus copy atau salin tuh kode di notepad
+<p align="center">
+  <img height="300" height="auto" src="https://user-images.githubusercontent.com/109174478/270798362-006848d8-4825-4739-9f6f-6f79e7c0d7d8.jpg">
+</p>
+4. Login ke akun hostinger kalian
+5. Pilih Domain > Manage Domain
+6. Klik DNS > Tambahkan DNS
+7. Pilih type TXT
+8. Name = `_acme-challenge`
