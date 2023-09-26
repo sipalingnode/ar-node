@@ -68,10 +68,21 @@ sudo certbot certonly --manual --preferred-challenges dns --email pakemailu@gmai
 ```
 3. Cek gambar yang di garis bawah, kalian harus copy atau salin tuh kode di notepad
 <p align="center">
-  <img height="300" height="auto" src="https://user-images.githubusercontent.com/109174478/270798362-006848d8-4825-4739-9f6f-6f79e7c0d7d8.jpg">
+  <img height="400" height="auto" src="https://user-images.githubusercontent.com/109174478/270798362-006848d8-4825-4739-9f6f-6f79e7c0d7d8.jpg">
 </p>
+
 4. Login ke akun hostinger kalian
 5. Pilih Domain > Manage Domain
 6. Klik DNS > Tambahkan DNS
 7. Pilih type TXT
 8. Name = `_acme-challenge`
+9. Dibagian content isi pake kode yang udah di salin tadi
+<p align="center">
+  <img height="300" height="auto" src="https://user-images.githubusercontent.com/109174478/270802511-608f19ab-d48b-437f-b127-8a970cc074e8.jpg">
+</p>
+
+10. Cek dns kalian : https://dnschecker.org/#TXT/
+11. Kalo dah aman maka hasilnya akan seperti gambar
+<p align="center">
+  <img height="600" height="auto" src="https://user-images.githubusercontent.com/109174478/270803220-1396dbe9-0152-476b-b254-4be290c687fc.jpg">
+</p>
