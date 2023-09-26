@@ -86,3 +86,47 @@ sudo certbot certonly --manual --preferred-challenges dns --email pakemailu@gmai
 <p align="center">
   <img height="600" height="auto" src="https://user-images.githubusercontent.com/109174478/270803220-1396dbe9-0152-476b-b254-4be290c687fc.jpg">
 </p>
+
+## SET Nginx
+```
+rm /etc/nginx/sites-available/default
+nano /etc/nginx/sites-available/default
+```
+Didalam file kalian isi dengan kalimat dibawah dan ganti semua kata `domainlu` dengan domain kalian
+```
+# Force redirects from HTTP to HTTPS
+server {
+    listen 80;
+    listen [::]:80;
+    server_name domainlu *.domainlu;
+
+    location / {
+        return 301 https://$host$request_uri;
+    }
+}
+
+# Forward traffic to your node and provide SSL certificates
+server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    server_name domainlu *.domainlu;
+
+    ssl_certificate /etc/letsencrypt/live/domainmu.zzz/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/domainmu.zzz/privkey.pem;
+
+    location / {
+        proxy_pass http://localhost:3000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_http_version 1.1;
+    }
+}
+```
+Kemudian simpan `CTRL+XY` lalu `ENter`
+
+## Restart Nginx dan Check
+```
+sudo service nginx restart
+sudo nginx -t
+```
