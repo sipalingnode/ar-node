@@ -30,6 +30,15 @@ wget -O ar-node.sh https://raw.githubusercontent.com/sipalingnode/ar-node/main/a
 cd ~/ar-io-node
 nano .env
 ```
+**Nanti didalam file isi dengan kata dibawah ini**
+```
+GRAPHQL_HOST=arweave.net
+GRAPHQL_PORT=443
+START_HEIGHT=1000000
+ARNS_ROOT_HOST=ganti dengan domain lu
+ADMIN_API_KEY=password lu bebas
+AR_IO_WALLET=address dari AR wallet
+```
 | GRAPHQL_HOST | arweave.net |
 | ------------ | ------------ |
 | GRAPHQL_PORT | 443 |
