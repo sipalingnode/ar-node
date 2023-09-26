@@ -56,3 +56,6 @@ Kalo udah ganti semua lalu `CRL+XY Enter `
 3. Klik DNS > lalu hapus semua DNS bawaan
 4. Tambahkan DNS baru
 5. Settingannya samain aja kek digambar, bedanya cuman di IPVPS
+<p align="center">
+  <img height="300" height="auto" src="https://user-images.githubusercontent.com/109174478/587b575d-8e5a-4817-a3b1-797184aa0618.jpg">
+</p>
