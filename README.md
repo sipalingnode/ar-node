@@ -49,3 +49,10 @@ AR_IO_WALLET=address dari AR wallet
 | AR_IO_WALLET | address dari AR wallet |
 
 Kalo udah ganti semua lalu `CRL+XY Enter `
+
+## Manage Domain (Pastikan domain kalian masih fresh tidak buat garap yang lain)
+1. Login ke akun hostinger kalian
+2. Pilih Domain > Manage Domain
+3. Klik DNS > lalu hapus semua DNS bawaan
+4. Tambahkan DNS baru
+5. Settingannya samain aja kek digambar, bedanya cuman di IPVPS
