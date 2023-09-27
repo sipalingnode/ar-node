@@ -142,3 +142,7 @@ sudo nginx -t
 ```
 https://IPVPS/3lyxgbgEvqNSvJrTX2J7CfRychUD5KClFhhVLyTPNCQ
 ```
+Hasilnya nanti seperti ini kalo dah berhasil
+<p align="center">
+  <img height="400" height="auto" src="https://user-images.githubusercontent.com/109174478/270837132-032ca9eb-89e8-4060-abbf-221eef788c81.jpg">
+</p>
