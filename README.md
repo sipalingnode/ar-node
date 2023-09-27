@@ -60,29 +60,32 @@ Kalo udah ganti semua lalu `CRL+XY Enter `
   <img height="200" height="auto" src="https://user-images.githubusercontent.com/109174478/270795435-587b575d-8e5a-4817-a3b1-797184aa0618.jpg">
 </p>
 
+## Build Docker
+```
+sudo docker-compose up -d --build
+```
 ## Setting SSL
-1. Login ke VPS lagi
-2. Lalu paste code yang dibawah (Perhatikan kodenya ada yang harus kalian ganti dibagian email & domain)
+1. Perhatikan kodenya ada yang harus kalian ganti dibagian email & domain
 ```
 sudo certbot certonly --manual --preferred-challenges dns --email pakemailu@gmail.com -d domainlu -d '*.domainlu'
 ```
-3. Cek gambar yang di garis bawah, kalian harus copy atau salin tuh kode di notepad
+2. Cek gambar yang di garis bawah, kalian harus copy atau salin tuh kode di notepad
 <p align="center">
   <img height="400" height="auto" src="https://user-images.githubusercontent.com/109174478/270798362-006848d8-4825-4739-9f6f-6f79e7c0d7d8.jpg">
 </p>
 
-4. Login ke akun hostinger kalian
-5. Pilih Domain > Manage Domain
-6. Klik DNS > Tambahkan DNS
-7. Pilih type TXT
-8. Name = `_acme-challenge`
-9. Dibagian content isi pake kode yang udah di salin tadi
+3. Login ke akun hostinger kalian
+4. Pilih Domain > Manage Domain
+5. Klik DNS > Tambahkan DNS
+6. Pilih type TXT
+7. Name = `_acme-challenge`
+8. Dibagian content isi pake kode yang udah di salin tadi
 <p align="center">
   <img height="300" height="auto" src="https://user-images.githubusercontent.com/109174478/270802511-608f19ab-d48b-437f-b127-8a970cc074e8.jpg">
 </p>
 
-10. Cek dns kalian : https://dnschecker.org/#TXT/
-11. Kalo dah aman maka hasilnya akan seperti gambar
+9. Cek dns kalian : https://dnschecker.org/#TXT/
+10. Kalo dah aman maka hasilnya akan seperti gambar
 <p align="center">
   <img height="600" height="auto" src="https://user-images.githubusercontent.com/109174478/270803220-1396dbe9-0152-476b-b254-4be290c687fc.jpg">
 </p>
