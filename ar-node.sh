@@ -16,10 +16,40 @@ echo -e "\e[0m"
 
 sleep 2
 
-echo -e "\e[1m\e[32m1. Install Bahan \e[0m" && sleep 1
-sudo apt update -y && sudo apt upgrade -y && sudo apt install -y curl openssh-server docker-compose git certbot nginx sqlite3 build-essential && sudo systemctl enable ssh && curl -sSL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - && echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list && sudo apt-get update -y && sudo apt-get install -y yarn && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash && source ~/.bashrc && sudo ufw allow 22 80 443 && sudo ufw enable
+echo -e "\e[1m\e[32m Install Bahan \e[0m" && sleep 1
+sudo apt update
+sudo apt upgrade
 
-echo -e "\e[1m\e[32m5. Clone Repo \e[0m" && sleep 1
+sudo apt install nginx -y
+
+sudo apt install git -y
+
+sudo apt install docker-compose -y
+
+sudo apt install certbot -y
+
+sudo apt install openssh-server -y
+sudo systemctl enable ssh
+
+curl -sSL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+
+sudo apt-get update -y
+
+sudo apt-get install yarn -y
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+source ~/.bashrc
+nvm install 16.15.1
+nvm use 16.15.1
+
+sudo apt install build-essential
+
+sudo apt install sqlite3 -y
+
+sudo ufw allow ssh; sudo ufw allow 80; sudo ufw allow 443; sudo ufw enable
+
 git clone https://github.com/ar-io/ar-io-node.git
 
 echo '=============== DONE ==================='
