@@ -151,4 +151,44 @@ Hasilnya nanti seperti ini kalo dah berhasil
 - Join [Discord](https://discord.gg/pG6uAAqssA)
 - Go to #testnet
 - Ketik /apply
-- Isi survey, lalu tunggu dikirim
+- Isi survey. Done tinggal nunggu token testnetnya dikirim
+
+## Jika sudah dapet Token Testnetnya
+
+## Clone Repo Contract
+```
+cd
+git clone https://github.com/ar-io/testnet-contract.git
+cd ~/testnet-contract
+```
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+source ~/.bashrc
+nvm install 16.15.1
+nvm use 16.15.1
+```
+```
+curl -sSL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt-get update -y
+sudo apt-get install yarn -y
+```
+```
+yarn install
+```
+```
+yarn build
+```
+## Upload Private key wallet AR (menggunakan file.json)
+1. Open ekstensi AR wallet
+2. Go to Setting
+3. Export Wallet > Pilih via file .json
+<p align="center">
+  <img height="500" height="auto" src="https://user-images.githubusercontent.com/109174478/270844277-01caa23c-ce09-4582-a94a-5a527ce258f2.jpg">
+</p>
+
+4. Ganti nama wallet menjadi `key.json`
+5. Upload file ke folder atau direktori `/testnet-contract`
+<p align="center">
+  <img height="200" height="auto" src="https://user-images.githubusercontent.com/109174478/270844878-fe5324fa-8bf9-43dc-bcf2-05eea99af3da.jpg">
+</p>
