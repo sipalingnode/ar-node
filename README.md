@@ -197,3 +197,151 @@ yarn build
 <p align="center">
   <img height="200" height="auto" src="https://user-images.githubusercontent.com/109174478/270844878-fe5324fa-8bf9-43dc-bcf2-05eea99af3da.jpg">
 </p>
+
+## Konfigurasi File `Join-Network.ts`
+```
+cd
+cd ~/testnet-contract
+```
+```
+nano tools/join-network.ts
+```
+**Jangan lupa ada kata yang harus diganti cek tabel**
+| qty | 10_000 |
+| ---- | ------ |
+| label | namalu |
+| fqdn | isi pake domain lu |
+| note | sama kaya deksripsi, isi kata bebas |
+
+<p align="left">
+  <img height="400" height="auto" src="https://user-images.githubusercontent.com/109174478/271132905-b5598dc4-1347-49e8-acff-fba86550202a.png">
+</p>
+
+Jika sudah di edit lalu `CTRL+XY` dan `ENTER` 
+
+## Running Join Network
+```
+yarn ts-node tools/join-network.ts
+```
+Kalo dah berhasil cek address AR kalian [disini](https://viewblock.io/arweave)
+<p align="center">
+  <img height="150" height="auto" src="https://user-images.githubusercontent.com/109174478/271130299-401ca1f1-876b-44cb-a6fb-a7304d1df2cc.png">
+</p>
+
+## Jika eror seperti gambar dibawah
+<p align="center">
+  <img height="200" height="auto" src="https://user-images.githubusercontent.com/109174478/271130234-bd925c74-9815-4291-8bec-0da71d705ae9.jpg">
+</p>
+
+```
+cd
+cd ~/testnet-contract
+```
+```
+nano tools/update-gateway-settings.ts
+```
+**Hapus semua isi yang ada di dalam file, dan ganti dengan ini (jangan lupa juga ganti dibagian `label` `fqdn` `note`)**
+```
+import Arweave from 'arweave';
+import { JWKInterface } from 'arweave/node/lib/wallet';
+import * as fs from 'fs';
+import {
+  LoggerFactory,
+  WarpFactory,
+  defaultCacheOptions,
+} from 'warp-contracts';
+
+import { keyfile } from './constants';
+
+LoggerFactory.INST.logLevel('error');
+
+/* eslint-disable no-console */
+// This script will join a gateway to the ar.io network, identified by the gateway operator's wallet address
+// A minimum amount of tokens must be staked to join, along with other settings that must be configured
+// Only the gateway's wallet owner is authorized to adjust these settings or leave the network in the future
+(async () => {
+  // the quantity of tokens to stake.  Must be greater than the minimum
+  const qty = 10_000;
+
+  // the friendly label for this gateway
+  const label = 'AlldiiRamadhan';
+
+  // the fully qualified domain name for this gateway eg. arweave.net
+  const fqdn = 'sipalingnode.tech';
+
+  // the port used for this gateway eg. 443
+  const port = 443;
+
+  // the application layer protocol used by this gateway eg http or https
+  const protocol = 'https';
+
+  // an optional gateway properties file located at this Arweave transaction id eg.
+  const properties = 'FH1aVetOoulPGqgYukj0VE0wIhDy90WiQoV3U2PeY44';
+
+  // an optional, short note to further describe this gateway and its status
+  const note = 'jangan biarkan orang lain mengubahmu, tapi buatlah mereka kagum dengan dirimu sendiri';
+
+  // Get the key file used for the distribution
+  const wallet: JWKInterface = JSON.parse(
+    process.env.JWK ? process.env.JWK : fs.readFileSync(keyfile).toString(),
+  );
+
+  // gate the contract txId
+  const arnsContractTxId =
+    process.env.ARNS_CONTRACT_TX_ID ??
+    'bLAgYxAdX2Ry-nt6aH2ixgvJXbpsEYm28NgJgyqfs-U';
+
+  // Initialize Arweave
+  const arweave = Arweave.init({
+    host: 'ar-io.dev',
+    port: 443,
+    protocol: 'https',
+  });
+
+  const warp = WarpFactory.forMainnet(
+    {
+      ...defaultCacheOptions,
+    },
+    true,
+  );
+
+  // wallet address
+  const walletAddress = await arweave.wallets.getAddress(wallet);
+
+  // Read the ANT Registry Contract
+  const pst = warp.pst(arnsContractTxId).connect(wallet);
+
+  console.log('Connected to contract with wallet: %s', walletAddress);
+  const txId = await pst.writeInteraction(
+    {
+      function: 'joinNetwork',
+      qty,
+      label,
+      fqdn,
+      port,
+      protocol,
+      properties,
+      note,
+    },
+    {
+      disableBundling: true,
+    },
+  );
+
+  console.log(
+    `${walletAddress} successfully submitted request to join the network with TX id: ${JSON.stringify(
+      txId,
+      null,
+      2,
+    )}`,
+  );
+})();
+```
+Kemudian simpan `CTRL+XY` dan `ENTER`
+```
+yarn ts-node tools/update-gateway-settings.ts
+```
+Cek nama kalian, kalo dah ada berarti aman : https://gateways.sipalingnode.tech/
+<p align="center">
+  <img height="500" height="auto" src="https://user-images.githubusercontent.com/109174478/271130354-4262e25b-0a8f-4574-aa85-475e968c1bf5.png">
+</p>
