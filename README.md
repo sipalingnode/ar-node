@@ -64,7 +64,7 @@ Kalo udah ganti semua lalu `CRL+XY Enter `
 ```
 sudo docker-compose up -d --build
 ```
-## Setting SSL
+## Create SSL
 **Perhatikan kodenya ada yang harus kalian ganti dibagian email & domain**
 ```
 sudo certbot certonly --manual --preferred-challenges dns --email pakemailu@gmail.com -d domainlu -d '*.domainlu'
