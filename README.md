@@ -146,3 +146,9 @@ Hasilnya nanti seperti ini kalo dah berhasil
 <p align="center">
   <img height="400" height="auto" src="https://user-images.githubusercontent.com/109174478/270837132-032ca9eb-89e8-4060-abbf-221eef788c81.jpg">
 </p>
+
+## Request Testnet Token
+- Join [Discord](https://discord.gg/pG6uAAqssA)
+- Go to #testnet
+- Ketik /apply
+- Isi survey, lalu tunggu dikirim
