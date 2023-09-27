@@ -65,11 +65,12 @@ Kalo udah ganti semua lalu `CRL+XY Enter `
 sudo docker-compose up -d --build
 ```
 ## Setting SSL
-1. Perhatikan kodenya ada yang harus kalian ganti dibagian email & domain
+**Perhatikan kodenya ada yang harus kalian ganti dibagian email & domain**
 ```
 sudo certbot certonly --manual --preferred-challenges dns --email pakemailu@gmail.com -d domainlu -d '*.domainlu'
 ```
-2. Cek gambar yang di garis bawah, kalian harus copy atau salin tuh kode di notepad
+1. Cek gambar yang di garis bawah, kalian harus copy atau salin tuh kode di notepad
+2. **Pada saat kode keluar dan udah di salin kalian harus melakukan step ini secara bersamaan dengan add DNS record, sebelum continue di vps**
 <p align="center">
   <img height="400" height="auto" src="https://user-images.githubusercontent.com/109174478/270798362-006848d8-4825-4739-9f6f-6f79e7c0d7d8.jpg">
 </p>
