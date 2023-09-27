@@ -345,3 +345,10 @@ Cek nama kalian, kalo dah ada berarti aman : https://gateways.sipalingnode.tech/
 <p align="center">
   <img height="500" height="auto" src="https://user-images.githubusercontent.com/109174478/271130354-4262e25b-0a8f-4574-aa85-475e968c1bf5.png">
 </p>
+
+## Request OG Role
+
+Kalo dah beres semua send proof ke discord beserta domain kalian, biar digetok OG
+<p align="center">
+  <img height="300" height="auto" src="https://user-images.githubusercontent.com/109174478/271137910-58346d4e-a9bf-4101-937e-3517b9a99d18.png">
+</p>
