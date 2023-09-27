@@ -2,7 +2,7 @@
 <a href="https://t.me/autosultan_group" target="_blank">Join our telegram <img src="https://user-images.githubusercontent.com/50621007/183283867-56b4d69f-bc6e-4939-b00a-72aa019d1aea.png" width="30"/></a>
 </p>
 <p align="center">
-  <img height="300" height="auto" src="https://user-images.githubusercontent.com/109174478/209359981-dc19b4bf-854d-4a2a-b803-2547a7fa43f2.jpg">
+  <img height="400" height="auto" src="https://user-images.githubusercontent.com/109174478/209359981-dc19b4bf-854d-4a2a-b803-2547a7fa43f2.jpg">
 </p>
 
 # TUTORIAL AR.io NODE
@@ -133,3 +133,6 @@ Kemudian simpan `CTRL+XY` lalu `ENter`
 sudo service nginx restart
 sudo nginx -t
 ```
+<p align="center">
+  <img height="200" height="auto" src="https://user-images.githubusercontent.com/109174478/270827531-dbb9def8-4a6e-4e81-b20d-527c80b6c0aa.jpg">
+</p>
