@@ -153,6 +153,11 @@ Hasilnya nanti seperti ini kalo dah berhasil
 - Ketik /apply
 - Isi survey. Done tinggal nunggu token testnetnya dikirim
 
+**Contoh jika sudah di approved atau token testnet nya dikirim**
+<p align="center">
+  <img height="300" height="auto" src="https://user-images.githubusercontent.com/109174478/271055308-e77e6b2b-2c6a-4480-9867-0990bd8bdaed.jpg">
+</p>
+
 ## Jika sudah dapet Token Testnetnya
 
 ## Clone Repo Contract
