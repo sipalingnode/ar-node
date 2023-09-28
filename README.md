@@ -6,7 +6,11 @@
 </p>
 
 # TUTORIAL AR.io NODE
-
+## SOSMED
+- [Twitter](https://x.com/ar_io_network)
+- [Discord](https://discord.gg/pG6uAAqssA)
+- [Website](https://ar.io/testnet/)
+  
 ## Hal yang di perlukan sebelum garap
 1. Siapkan domain bisa buy disini murah 15K : https://www.hostinger.co.id/
 2. token Arweave $AR buy di Binance atau seller
