@@ -356,3 +356,10 @@ Kalo dah beres semua send proof ke discord beserta domain kalian, biar digetok O
 <p align="center">
   <img height="300" height="auto" src="https://user-images.githubusercontent.com/109174478/271137910-58346d4e-a9bf-4101-937e-3517b9a99d18.png">
 </p>
+
+## Matikan Node Jika sudah selesai testnetnya
+```
+cd ~/ar-io-node
+docker compose down -v
+docker rmi ghcr.io/ar-io/ar-io-core ghcr.io/ar-io/ar-io-envoy
+```
